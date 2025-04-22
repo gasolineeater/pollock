@@ -19,7 +19,7 @@ int	main(void)
 		x = WIDTH * 0.1;
 		while (x < WIDTH * 0.9)
 		{
-			mlx_put_pixel(img, x, y, 0xFF0000FF);
+			mlx_put_pixel(img, x, y, (rand() % 0x1000000));
 			x++;
 		}
 		y++;
