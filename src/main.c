@@ -1,5 +1,6 @@
 #include "MLX42/MLX42.h"
 #include "MLX42/MLX42_Int.h"
+#include <time.h>
 
 #define WIDTH 800
 #define HEIGHT 500
@@ -11,6 +12,7 @@ int	main(void)
 	mlx_t		*mlx;
 	mlx_image_t	*img;
 
+	srand(time(NULL));
 	y = HEIGHT * 0.1;
 	mlx = mlx_init(WIDTH, HEIGHT, "test", 1);
 	img = mlx_new_image(mlx, WIDTH, HEIGHT);
