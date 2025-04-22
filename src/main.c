@@ -25,5 +25,6 @@ int	main(void)
 		y++;
 	}
 	mlx_image_to_window(mlx, img, 0, 0);
+	mlx_put_string(mlx, "Elvi Zekaj", WIDTH * 0.8, HEIGHT * 0.9);
 	mlx_loop(mlx);
 }
