@@ -6,17 +6,23 @@
 
 int	main(void)
 {
-	int			i;
+	int			y;
+	int			x;
 	mlx_t		*mlx;
 	mlx_image_t	*img;
 
-	i = 0;
+	y = 0;
 	mlx = mlx_init(WIDTH, HEIGHT, "test", 1);
 	img = mlx_new_image(mlx, WIDTH, HEIGHT);
-	while (i <= WIDTH/2 - 1)
+	while (y < HEIGHT)
 	{
-		mlx_put_pixel(img, WIDTH/2 + i, HEIGHT/2, 0xFF0000FF);
-		i++;
+		x = 0;
+		while (x < WIDTH)
+		{
+			mlx_put_pixel(img, x, y, 0xFF0000FF);
+			x++;
+		}
+		y++;
 	}
 	mlx_image_to_window(mlx, img, 0, 0);
 	mlx_loop(mlx);
