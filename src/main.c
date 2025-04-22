@@ -15,7 +15,7 @@ int	main(void)
 	img = mlx_new_image(mlx, WIDTH, HEIGHT);
 	while (i <= WIDTH/2 - 1)
 	{
-		mlx_put_pixel(img, WIDTH/2 + i, HEIGHT/2 + i, 0xFF0000FF);
+		mlx_put_pixel(img, WIDTH/2 + i, HEIGHT/2, 0xFF0000FF);
 		i++;
 	}
 	mlx_image_to_window(mlx, img, 0, 0);
