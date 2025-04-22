@@ -11,13 +11,13 @@ int	main(void)
 	mlx_t		*mlx;
 	mlx_image_t	*img;
 
-	y = 0;
+	y = 50;
 	mlx = mlx_init(WIDTH, HEIGHT, "test", 1);
 	img = mlx_new_image(mlx, WIDTH, HEIGHT);
-	while (y < HEIGHT)
+	while (y < HEIGHT - 50)
 	{
-		x = 0;
-		while (x < WIDTH)
+		x = 50;
+		while (x < WIDTH - 50)
 		{
 			mlx_put_pixel(img, x, y, 0xFF0000FF);
 			x++;
